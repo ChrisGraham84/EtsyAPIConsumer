@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCD1857E-54F2-4FF2-B633-5B5CCE65D37B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EtsyApiConsumer</RootNamespace>
+    <AssemblyName>EtsyApiConsumer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\GAFY\test\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>41E182F4C51758FDEC3B575751E9F4959CDDCAFC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EtsyApiConsumer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiteDB, Version=1.0.4.0, Culture=neutral, PublicKeyToken=5c2fff750805920e, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.1.0.4\lib\net40\LiteDB.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AddColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddColor.Designer.cs">
+      <DependentUpon>AddColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddStyle.Designer.cs">
+      <DependentUpon>AddStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DesignAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DesignAdd.Designer.cs">
+      <DependentUpon>DesignAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DownloadForm.Designer.cs">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DownloadUploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DownloadUploadForm.Designer.cs">
+      <DependentUpon>DownloadUploadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AppKeys.cs" />
+    <Compile Include="Helpers\ExportHelpers.cs" />
+    <Compile Include="Helpers\FormattingHelpers.cs" />
+    <Compile Include="Helpers\ImportHelpers.cs" />
+    <Compile Include="Helpers\Listing.cs" />
+    <Compile Include="Helpers\OAuth.cs" />
+    <Compile Include="Models\CountryShippingMethod.cs" />
+    <Compile Include="Models\DynamicEntity.cs" />
+    <Compile Include="Models\EtsyOrders.cs" />
+    <Compile Include="Models\InternalClient.cs" />
+    <Compile Include="Models\InternalClientDesign.cs" />
+    <Compile Include="Models\InternalClientStyle.cs" />
+    <Compile Include="Models\ExtractionModel.cs" />
+    <Compile Include="Models\Listing.cs" />
+    <Compile Include="Models\ListingVariation.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\Receipt.cs" />
+    <Compile Include="Models\ReceiptTransaction.cs" />
+    <Compile Include="Models\Shop.cs" />
+    <Compile Include="Models\SKUImportTemplate.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserProfile.cs" />
+    <Compile Include="Models\Variation.cs" />
+    <Compile Include="Models\VariationOptions.cs" />
+    <Compile Include="Models\Variation_SelectedProperty.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ExtractionService.cs" />
+    <Compile Include="Services\GAFYClientService.cs" />
+    <Compile Include="Services\CountryService.cs" />
+    <Compile Include="Services\ListingService.cs" />
+    <Compile Include="Services\ReceiptService.cs" />
+    <Compile Include="Services\ShippingTemplateService.cs" />
+    <Compile Include="Services\ShopService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Forms\UploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UploadForm.Designer.cs">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAdmin.Designer.cs">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="EtsyApiConsumer_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AddColor.resx">
+      <DependentUpon>AddColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddStyle.resx">
+      <DependentUpon>AddStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DesignAdd.resx">
+      <DependentUpon>DesignAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DownloadForm.resx">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DownloadUploadForm.resx">
+      <DependentUpon>DownloadUploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UploadForm.resx">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAdmin.resx">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
