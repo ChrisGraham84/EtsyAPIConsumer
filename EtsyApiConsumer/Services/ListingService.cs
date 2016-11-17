@@ -67,14 +67,14 @@ namespace EtsyApiConsumer.Services
                 {
                     JObject o = JObject.Parse(response.Content);
                     Listing listing = JsonConvert.DeserializeObject<Listing>(o["results"][0].ToString());
-                    Thread.Sleep(1000);
+                    Thread.Sleep(2000);
                     Console.WriteLine("listing created...");
                     return (listing);
                 }
                 else
                 {
                     Console.WriteLine("Listing was unable to be created: {0}", response.StatusDescription);
-                    Thread.Sleep(1000);
+                    Thread.Sleep(2000);
                     return (null);
                 }
             }
